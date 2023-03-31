@@ -1,2 +1,2 @@
 # NNT
-Exercícios do curso Novos Negócios em TIC
+Exercícios do curso Novos Negócios em TICs
