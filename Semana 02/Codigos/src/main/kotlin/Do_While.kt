@@ -19,7 +19,7 @@ fun ex2dw(){
 fun ex3dw(){
     println("Parte 3:")
     var i:Int
-    val sort = 8
+    val sort = (1..10).random()
     do{
         print("Digite um número de 1 a 10: ")
         i = readln().toInt()
