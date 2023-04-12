@@ -6,7 +6,7 @@ class Pessoa(nome:String, idade:Int){
 fun main(){
     var total = 0
     var opc:Int
-    var arr = arrayOf(Pessoa("", -1))
+    var arr = arrayOf<Pessoa>()
     do{
         print("""
             |Digite a opção desejada:
@@ -25,14 +25,7 @@ fun main(){
                 val nome = readln()
                 print("Digite a idade: ")
                 val idade = readln().toInt()
-
-                if(total == 0){
-                    val arr2 = arrayOf(Pessoa(nome, idade))
-                    arr = arr2
-                }
-                else{
-                    arr += Pessoa(nome, idade)
-                }
+                arr += Pessoa(nome, idade)
                 total++
             }
             2 -> {
@@ -77,13 +70,13 @@ fun main(){
                 else{
                     print("Digite o nome: ")
                     val nome = readln()
-                    var arr2 = arrayOf(arr[0])
-                    for(i in 1 until total){
-                        if(arr[i].name != nome){
-                            arr2 += arr[i]
-                        }
+                    var arr2 = arrayOf<Pessoa>()
+                    for(i in arr){
+                        if(i.name != nome)
+                            arr2 += i
                     }
                     arr = arr2
+                    total--
                 }
             }
             6 -> {
