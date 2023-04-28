@@ -16,8 +16,7 @@ fun fibonacci(n: Int): Int {
 
 //3
 fun MDC(n1: Int, n2: Int, x: Int): Int {
-    if(x == 0) return -1
-    else if(n1 % x == 0 && n2 % x == 0)
+    if(n1 % x == 0 && n2 % x == 0)
         return x
     return MDC(n1, n2, x-1)
 }
@@ -55,7 +54,7 @@ fun main() {
     val n1 = readln().toInt()
     val n2 = readln().toInt()
     val menor = min(n1, n2)
-    println("O MDC de $n1 e $n2 é ${MDC(n1, n2, menor)} (-1 se não existir).")
+    println("O MDC de $n1 e $n2 é ${MDC(n1, n2, menor)}.")
 
     print("Digite uma string: ")
     val str = readln()
